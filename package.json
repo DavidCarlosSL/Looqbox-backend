@@ -1,0 +1,25 @@
+{
+  "name": "looqbox-backend",
+  "version": "0.1.0",
+  "description": "Looqbox Challange Backend - Web API Rest",
+  "main": "server.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidCarlosSL/Looqbox-backend.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Typescript",
+    "PokeAPI",
+    "Docker"
+  ],
+  "author": "David Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidCarlosSL/Looqbox-backend/issues"
+  },
+  "homepage": "https://github.com/DavidCarlosSL/Looqbox-backend#readme"
+}
