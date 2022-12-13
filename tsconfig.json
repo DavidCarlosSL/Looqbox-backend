@@ -10,8 +10,6 @@
         "outDir": "dist",
         "pretty": true,
         "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
         "strictPropertyInitialization": false,
         "resolveJsonModule": true
     },
