@@ -4,7 +4,10 @@
   "description": "Looqbox Challange Backend - Web API Rest",
   "main": "server.js",
   "scripts": {
-    "test": "exit 0"
+    "serve": "ts-node-dev src/server.ts",
+    "test": "exit 0",
+    "build": "tsc --noEmitOnError",
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,16 @@
   "bugs": {
     "url": "https://github.com/DavidCarlosSL/Looqbox-backend/issues"
   },
-  "homepage": "https://github.com/DavidCarlosSL/Looqbox-backend#readme"
+  "homepage": "https://github.com/DavidCarlosSL/Looqbox-backend#readme",
+  "devDependencies": {
+    "@types/cors": "~2.8.13",
+    "@types/express": "~4.17.14",
+    "ts-node-dev": "~2.0.0",
+    "typescript": "~4.9.4"
+  },
+  "dependencies": {
+    "cors": "~2.8.5",
+    "express": "~4.18.2",
+    "helmet": "~6.0.1"
+  }
 }
