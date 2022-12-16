@@ -7,7 +7,7 @@
     "serve": "ts-node-dev src/server.ts",
     "test": "exit 0",
     "build": "tsc --noEmitOnError",
-    "start": "node dist/server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
