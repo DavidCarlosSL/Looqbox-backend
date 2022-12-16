@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  looqbox-backend:
+    image: looqboxbackend:latest
+    pull_policy: never
+    container_name: looqbox-backend
+    ports:
+      - 8080:8080
