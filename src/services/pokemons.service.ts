@@ -70,33 +70,36 @@ class PokemonsService implements IPokemonsService {
 
     public sortPokemonsByLength(pokemonsToSort: string[]): string[] {
 
-        const longestPokemonName = pokemonsToSort.reduce((pokemonA, pokemonB) => {
+        //This method implements the Counting Sort Algorithm for sorting the array of pokemons by length
+
+        const longestPokemonName = pokemonsToSort.reduce((pokemonA, pokemonB) => { //Find the pokemon with the longest name
             return pokemonA.length > pokemonB.length ? pokemonA : pokemonB;
         });
 
-        const count: number[] = [];
-        const sortedPokemons: string[] = [];
+        const count: number[] = []; //List of counts for each unique value (length of pokemon's name) in the pokemon array
+        const sortedPokemons: string[] = []; //Array that will be returned containing the sorted pokemons. Initally is empty
 
         let i: number = 0;
         
-        for(i = 0; i <= longestPokemonName.length; i++){
-            count[i] = 0;
+        for(i = 0; i <= longestPokemonName.length; i++){ //For Loop responsible to fill the count array with zeros. count array will have the length of
+            count[i] = 0;                                //the longest pokemon name plus one
         }
 
-        for (i = 0; i < pokemonsToSort.length; i++) {
-            sortedPokemons[i] = " ";
+        for (i = 0; i < pokemonsToSort.length; i++) { //For Loop responsible to fill the sortedPokemons array with "empty" strings. sortedPokemons array will
+            sortedPokemons[i] = " ";                  //have the same length of the pokemonsToSort array
         }
 
-        for (i = 0; i < pokemonsToSort.length; i++) {
+        for (i = 0; i < pokemonsToSort.length; i++) { //For Loop responsible for define how many times each unique value (length of pokemon's name) appears
             count[pokemonsToSort[i].length]++;
         }
 
-        for (i = 1; i < count.length; i++) {
+        for (i = 1; i < count.length; i++) { //For Loop responsible to define each index as equal to the sum of itself plus the previous one
             count[i] += count[i-1];
         }
 
         for (i = pokemonsToSort.length - 1; i >= 0; i--) {
-            sortedPokemons[--count[pokemonsToSort[i].length]] = pokemonsToSort[i];
+            sortedPokemons[--count[pokemonsToSort[i].length]] = pokemonsToSort[i]; //For Loop resposible to iterate backwards through the pokemonsToSort array
+                                                                                   //It copy elements from pokemonsToSort to sortedPokemons according to the count
         }
 
         return sortedPokemons;
