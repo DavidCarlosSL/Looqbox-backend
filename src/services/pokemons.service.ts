@@ -102,6 +102,9 @@ class PokemonsService implements IPokemonsService {
                                                                                    //It copy elements from pokemonsToSort to sortedPokemons according to the count
         }
 
+        //According to already defined studies, the Counting Sort Algorithm have a Average Time Complexity of O(N+K), where N is the number of elements in the
+        //input and K is the range of elements (K = largest element - smallest element). The Space Complexity is O(K)
+
         return sortedPokemons;
     }
 }
